@@ -1,0 +1,134 @@
+
+narrator "To jest plik testowy. Tu są pokazane wszystkie możliwe funkcje, które zostały do tej pory zaprogramowane."
+
+CreateCharacter(Raelin -enabled true)
+"To jest nasza przykładowa postać."
+
+Raelin "Hejka!"
+
+input "Jak ty się nazywasz?"
+
+<input> "Nazywam się <input>..."
+
+narrator "Świetnie!"
+
+"Teraz czeka cię ciężka decyzja..."
+
+choice "Najpierw płatki czy mleko?"
+{
+	-Płatki!
+	"Dobrzeee!"
+	-Mleko!
+	"I ty jeszcze żyjesz?"
+	"Niebywałe..."
+	-Herbatę!
+	"..."
+	-Kanapkę!
+	"A z czym?"
+	choice "Z czym jesz kanapkę?"
+	{
+		-Z szynką
+		"Mniam!"
+		-Z Serem
+		"Fuuuuj!"
+	}
+	-Kawę!
+	"Nie ma to jak się wysrać, a potem zjeść..."
+}
+
+"Wracając... Która jest?"
+
+"A tak, już widzę, że jest <time>."
+
+"Dobra, miejmy to już z głowy..."
+
+"W dialogu mamy coś takiego, jak 'a'{a}, co dodaje tekst do dialogu."
+
+"Również posiadamy 'c'.{c}Ono czyści całą linijkę."
+
+"I każda z tych dwóch opcji posiada czekaj, czyli 'w'. {wa 1} Jeżeli damy tam dalej liczbę to tyle sekund poczeka, od momentu, kiedy cały dialog się pojawi. Teraz dam 5 {wc 5} Widzisz? Samo zniknęło!"
+
+Raelin [1:A_Scold] "Hej! pamiętasz, że tu jestem?"
+
+narrator "Tak, pamiętam. właśnie miałem się tobą zająć."
+
+Raelin.SetSprite(-s B1)
+[wait]Raelin.SetSprite(-sprite B_Default -l 1)
+
+"Widzę, że już pokazałaś zmianę twarzy oraz swojej pozycji, świetnie." 
+
+"Możesz się teraz ruszyć na prawo?"
+
+[wait]MoveCharacter(Raelin -x 0 -y 0)
+Raelin "Tu?"
+
+narrator "To drugie prawo"
+Raelin.FaceDirection(-fl false -i true)
+[wait]MoveCharacter(Raelin -sm false -x 1 -y 0)
+
+"O, a teraz wróć natychmiast na swoją pozycję"
+
+Raelin.SetPosition(-x 0.5 -y 0)
+
+"Dobrze... Teraz znikaj"
+
+Raelin.Hide()
+
+wait(2)
+
+Raelin.Show(), Raelin.Animate("Shiver")
+
+Raelin "Zimno jest za tą kurtyną!"
+
+Narrator "Może zmieńmy miejsce przebywania..."
+
+[wait]SetLayerMedia(-p background -m 01_1)
+Raelin.Animate("Shiver" -state false)
+
+Raelin "Od razu lepiej, dzięki"
+
+narrator "To tera pokaż co potrafisz"
+
+Raelin.SetColor(-color orange -i true)
+
+Raelin "Potrafię zmieniać kolor"
+
+[wait]Raelin.SetColor(-color white)
+
+enter Stella "Hejka!"
+
+Raelin "Ej, gdzie się pchasz"
+
+Stella "Oj sorki"
+
+Raelin.SetPriority(2)
+
+Stella.SetPriority(1)
+
+Sort()
+
+Raelin "Skąd ona się tu wzięła?"
+
+narrator "Nie wiem, tak szczerze..."
+
+Stella "To może... Ja już sobie pójdę..."
+
+Stella.Hide()
+
+narrator "Dobra, to może teraz załączmy jakiś music."
+
+PlaySFX(-sfx RadioStatic -loop true)
+
+"Tylko nastawię radio"
+
+StopSFX(RadioStatic)
+
+PlaySong(-song Calm)
+
+"No, od razu lepiej. {a} Powiedz coś"
+
+PlayVoice(-voice exclamation)
+
+"No, może być, a teraz, przełączmy plik!"
+
+Load(-file Chapter_1)

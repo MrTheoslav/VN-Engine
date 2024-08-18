@@ -1,0 +1,11 @@
+"This is audio test file"
+
+PlaySFX(-sfx RadioStatic -l true)
+
+"Playing sfx:"
+
+StopSFX(RadioStatic)
+
+"Sfx Stopped"
+
+PlayVoice(-voice exclamation)

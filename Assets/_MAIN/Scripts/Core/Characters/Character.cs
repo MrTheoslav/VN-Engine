@@ -116,7 +116,7 @@ namespace CHARACTERS
 
         public virtual IEnumerator ShowingOrHiding(bool show, float speedMultiplier = 1)
         {
-            Debug.Log("Show/Hide cannot be called from a base character type.");
+            Debug.LogError("Show/Hide cannot be called from a base character type.");
             yield return null;
         }
 

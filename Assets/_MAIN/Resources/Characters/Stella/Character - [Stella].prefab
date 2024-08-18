@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 5015040612630536703}
   - component: {fileID: 1629387097930498913}
   m_Layer: 5
-  m_Name: Character - [Female Student 2]
+  m_Name: Character - [Stella]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

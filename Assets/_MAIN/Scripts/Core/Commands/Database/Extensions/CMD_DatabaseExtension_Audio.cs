@@ -5,7 +5,7 @@ namespace COMMANDS
 {
     public class CMD_DatabaseExtension_Audio : CMD_DatabaseExtension
     {
-        private static string[] PARAM_SFX => new string[] { "-s", "-sfx" };
+        private static string[] PARAM_SFX => new string[] { "-s", "-sfx", "-voice"};
         private static string[] PARAM_VOLUME => new string[] { "-v", "-vol", "-volume" };
         private static string[] PARAM_PITCH => new string[] { "-p", "-pitch" };
         private static string[] PARAM_LOOP => new string[] { "-l", "-loop" };
